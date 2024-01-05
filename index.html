@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Recipe Generator</title>
 </head>
@@ -14,13 +15,11 @@
 </header>
 
 <main>
-    <form>
+    <form id="recipe-generator-form">
         <input type="text" placeholder="What kind of recipe are you looking for?" autofocus required class="instructions" />
         <input type="submit"  class="submitButton"/>
     </form>
-    <div class="recipe">
-        The recipe will go here
-    </div>
+    <div class="recipe" id="recipe"></div>
 </main>
 <footer>
     This project was created by Holly Allison which is open-sourced on <a href="https://github.com/hollyallison/Recipe-Generator" target="_blank"> Github
