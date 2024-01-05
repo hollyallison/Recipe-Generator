@@ -7,6 +7,7 @@
     <title>AI Recipe Generator</title>
 </head>
 <body>
+   <div class="container"> 
   <header>
 
 <h1> Welcome to the recipe generator </h1>
@@ -14,10 +15,10 @@
 
 <main>
     <form>
-        <input type="text" placeholder="What kind of recipe are you looking for?" autofocus required />
-        <input type="submit" />
+        <input type="text" placeholder="What kind of recipe are you looking for?" autofocus required class="instructions" />
+        <input type="submit"  class="submitButton"/>
     </form>
-    <div>
+    <div class="recipe">
         The recipe will go here
     </div>
 </main>
@@ -26,6 +27,7 @@
 
     </a>
 </footer>
+</div>
     <script src="src/index.js"></script>
 </body>
 </html>
