@@ -17,6 +17,9 @@ function generateRecipe(event) {
     let context = "You are an AI skilled in culinary arts. Generate a comprehensive recipe including ingredients, quantities, and detailed cooking instructions. Make sure to use the user instructions";
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+    let recipeElement = document.querySelector("#recipe");
+    recipeElement.classList.remove("hidden");
+    recipeElement.innerHTML = `⏳Generating a ${instructionsInput.value} recipe for you`;
     axios.get(apiUrl).then(displayRecipe).catch(error => console.error('Error fetching recipe:', error));
 
     console.log("Generating recipe");
