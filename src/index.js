@@ -14,7 +14,7 @@ function generateRecipe(event) {
     let instructionsInput = document.querySelector('#user-instructions');
     let apiKey = "2c40a31a9bebb30oc02aftf7a42a8b2e";
     let prompt = `User instructions: Generate a ${instructionsInput.value} recipe`;
-    let context = "You are an AI skilled in culinary arts. Generate a comprehensive recipe including ingredients, quantities, and detailed cooking instructions. Make sure to use the user instructions";
+    let context = "Follow user instructions and display the answer in html format where title of the recipe is included in class element named title, ingredients and quantities in class element named ingredients using list format <ul><li></li><li></li><li></li><li><li> <li></li></ul>. Put cooking instructions in class element named method with numbers for each step. Please always start part 3 with Cooking Method in the top line. Please RESPECT the css for EACH class and keep this css consistent";
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
     let recipeElement = document.querySelector("#recipe");
